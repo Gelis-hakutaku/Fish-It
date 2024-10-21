@@ -413,6 +413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3914539037661195969, guid: 6d2c3b0e80a52dc4ebade99223cf9f34, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c0062b796fb57945b4fe29b3a5ffade, type: 2}
     - target: {fileID: 5961485925416473349, guid: 6d2c3b0e80a52dc4ebade99223cf9f34, type: 3}
       propertyPath: m_Name
       value: Poisson
