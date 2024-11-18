@@ -22,10 +22,4 @@ public class Target_Movement : MonoBehaviour
         yield return new WaitForSeconds(_lifetime);
         Destroy(this.gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
