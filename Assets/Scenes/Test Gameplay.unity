@@ -496,6 +496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Harpon
       objectReference: {fileID: 0}
+    - target: {fileID: 6620358361073576764, guid: 63edd61eaab5eab4d9695e6a9ff8cb1b, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7501029844276185869, guid: 63edd61eaab5eab4d9695e6a9ff8cb1b, type: 3}
       propertyPath: target
       value: 

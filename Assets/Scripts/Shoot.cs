@@ -26,7 +26,7 @@ public class Shoot : MonoBehaviour
 
     IEnumerator HideMesh()
     {
-        Instantiate(ammo);
+        Instantiate(ammo, this.transform.position, Quaternion.identity);
         mr.enabled = false;
         canFire = false;
         yield return new WaitForSeconds(0.5f);
