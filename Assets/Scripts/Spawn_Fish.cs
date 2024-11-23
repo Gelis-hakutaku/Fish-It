@@ -22,7 +22,6 @@ public class Spawn_Fish : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("Spawn Fish");
             float waitTime = Random.Range(minTime, maxTime);
 
             yield return new WaitForSeconds(waitTime);
