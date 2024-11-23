@@ -149,3 +149,5 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 7988337740194310893}
   _score: {fileID: 11400000, guid: 0bb50518ec788ec41a1d4817ebb4a97d, type: 2}
+  _timer: {fileID: 11400000, guid: 24de84b1a620e12449b01027e019e665, type: 2}
+  bonusChain: 1
