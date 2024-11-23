@@ -7,6 +7,7 @@ public class Spawn_Fish : MonoBehaviour
     [SerializeField] private GameObject[] fish;
     [SerializeField] private float minTime;
     [SerializeField] private float maxTime;
+    [SerializeField] private TimerManager timer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Spawn_Fish : MonoBehaviour
     }
     IEnumerator SpawnFish()
     {
-        while (true)
+        while (timer.duration > 0)
         {
             float waitTime = Random.Range(minTime, maxTime);
 
