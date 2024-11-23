@@ -536,12 +536,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_Spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 7914754821101808314, guid: 2c860b506e6b3b54ebc8cd6508be67ee, type: 3}
-      propertyPath: _limits
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7914754821101808314, guid: 2c860b506e6b3b54ebc8cd6508be67ee, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 5351396480249241535, guid: 2c860b506e6b3b54ebc8cd6508be67ee, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

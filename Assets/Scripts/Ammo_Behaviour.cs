@@ -5,11 +5,17 @@ using UnityEngine;
 public class Ammo_Behaviour : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private Transform target;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private ScoreManager _score;
+
+    private Transform target;
+    private int bonusChain;
+
 
     private void Start()
     {
+        bonusChain = 1;
+
         target = FindObjectOfType<Follow_Cursor>().transform;
 
         StartCoroutine(LifeTime());
@@ -24,5 +30,16 @@ public class Ammo_Behaviour : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         Destroy(this.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        CompareTag("Fish");
+            {
+                _score.score += 10 * bonusChain;
+                bonusChain *= 2;
+                Destroy(collision.gameObject);
+            }
+        Debug.Log(_score.score);
     }
 }

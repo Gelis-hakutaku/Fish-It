@@ -7,7 +7,7 @@ public class ScoreManager : ScriptableObject
 {
     [SerializeField] private int _score;
 
-    public int Score
+    public int score
     {
         get => _score;
         set => _score = value;
