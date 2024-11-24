@@ -130,6 +130,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1493737877773315164, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b558b2c879cf2024e8f25071ab378f4b, type: 3}
     - target: {fileID: 1775675358086145443, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
       propertyPath: m_Name
       value: Canvas_titre
@@ -192,11 +196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3409316692449857869, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 294
+      value: 236
       objectReference: {fileID: 0}
     - target: {fileID: 3409316692449857869, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 144
+      value: 134
       objectReference: {fileID: 0}
     - target: {fileID: 3604341902915311967, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
       propertyPath: m_Pivot.x
@@ -308,11 +312,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5883059914292927902, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -226
+      value: -215.44
       objectReference: {fileID: 0}
     - target: {fileID: 5883059914292927902, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 144
+      value: 123.1
       objectReference: {fileID: 0}
     - target: {fileID: 9089642036871754890, guid: 03ef353785488fa4ea9db1788fc19bb4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

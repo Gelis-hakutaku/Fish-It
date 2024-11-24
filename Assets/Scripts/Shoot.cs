@@ -9,6 +9,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private MeshRenderer mr;
     [SerializeField] private GameObject ammo;
     [SerializeField] private WeaponManager stats;
+    [SerializeField] private AudioSource tir;
     private bool canFire = true;
 
     private void Update()
@@ -19,7 +20,7 @@ public class Shoot : MonoBehaviour
     {
             if (Input.GetMouseButtonDown(0) && canFire)
             {
-                Debug.Log("fire");
+                tir.Play();
                 StartCoroutine(HideMesh());
             }
         yield return null;

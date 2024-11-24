@@ -159,5 +159,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: -100
-  _lifetime: 120
+  _lifetime: 240
   _rb: {fileID: 8763836655339359677}
