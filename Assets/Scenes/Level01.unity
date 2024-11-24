@@ -176,17 +176,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4178373068788864332, guid: 2c860b506e6b3b54ebc8cd6508be67ee, type: 3}
-      propertyPath: fish.Array.size
+      propertyPath: maxTime
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4178373068788864332, guid: 2c860b506e6b3b54ebc8cd6508be67ee, type: 3}
-      propertyPath: fish.Array.data[3]
-      value: 
-      objectReference: {fileID: 6026634577307398843, guid: 7a8f07d846df89d4abc9bcf9bd48ab69, type: 3}
-    - target: {fileID: 4178373068788864332, guid: 2c860b506e6b3b54ebc8cd6508be67ee, type: 3}
-      propertyPath: fish.Array.data[4]
-      value: 
-      objectReference: {fileID: 3113729221089722929, guid: c1f8be6095c541a49b2fbc17aaa7ba84, type: 3}
     - target: {fileID: 5351396480249241535, guid: 2c860b506e6b3b54ebc8cd6508be67ee, type: 3}
       propertyPath: m_Name
       value: Fish_Spawner (1)
