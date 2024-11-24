@@ -1,6 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ammo_Behaviour : MonoBehaviour
 {
@@ -13,40 +17,49 @@ public class Ammo_Behaviour : MonoBehaviour
     [SerializeField] private WeaponManager _weapon;
     private float normalFireRate;
     private Transform target;
+    private GameObject canvas;
 
+    private Queue<Action> actions = new();
 
 
     private void Start()
     {
+        
         target = FindObjectOfType<Follow_Cursor>().transform;
-
         normalFireRate = _weapon.fireRate;
 
-        StartCoroutine(LifeTime());
+        //StartCoroutine(LifeTime());
 
         Vector3 direction = target.position - transform.position;
         transform.LookAt(target.position);
         rb.velocity = direction.normalized * speed;
     }
 
+    private void Update()
+    {
+        while (actions.TryDequeue(out Action action))
+            action.Invoke();
+    }
+
     IEnumerator LifeTime()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5.1f);
 
         Destroy(this.gameObject);
     }
 
-    /*IEnumerator Blinded()
+    IEnumerator Blinded()
     {
-        Vector3 spawnPos = Camera.main.WorldToScreenPoint(Camera.main.transform.position);
-        Instantiate(_uiManager.uiEncre, spawnPos, Quaternion.LookRotation(Camera.main.transform.position));
-        yield return new WaitForSeconds(3f);
-    }*/
+        canvas = EncreClass.Encre;
+        canvas.SetActive(true);
+
+        yield return null;
+    }
 
     IEnumerator IncreaseFirerate()
     {
-        _weapon.fireRate = 0.2f;
-        yield return new WaitForSeconds(5f);
+ 
+        yield return new WaitForSeconds(5);
         _weapon.fireRate = normalFireRate;
     }
     private void OnTriggerEnter(Collider collision)
@@ -66,10 +79,11 @@ public class Ammo_Behaviour : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        /*if (collision.CompareTag("Squid"))
+        if (collision.CompareTag("Squid"))
         {
             StartCoroutine(Blinded());
-        }*/
+            Destroy(collision.gameObject);
+        }
 
         if (collision.CompareTag("PufferFish"))
         {
@@ -79,6 +93,7 @@ public class Ammo_Behaviour : MonoBehaviour
 
         if (collision.CompareTag("Barrel"))
         {
+            _weapon.fireRate = 0.2f;
             StartCoroutine(IncreaseFirerate());
             Destroy(collision.gameObject);
         }

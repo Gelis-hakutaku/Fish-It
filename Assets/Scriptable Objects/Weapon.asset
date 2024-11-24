@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7bd5e8dde5ce74189d5dd64564bae1, type: 3}
   m_Name: Weapon
   m_EditorClassIdentifier: 
-  _fireRate: 0.5
+  _fireRate: 0.2
