@@ -11,7 +11,7 @@ public class Barrelmovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            _rb.AddForce(_speed / Random.Range(1, 2), 0f, 0f);
+            _rb.AddForce(_speed, 0f, 0f);
 
             StartCoroutine(Lifetime());
     }

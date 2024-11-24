@@ -28,7 +28,7 @@ public class Ammo_Behaviour : MonoBehaviour
         target = FindObjectOfType<Follow_Cursor>().transform;
         normalFireRate = _weapon.fireRate;
 
-        //StartCoroutine(LifeTime());
+        StartCoroutine(LifeTime());
 
         Vector3 direction = target.position - transform.position;
         transform.LookAt(target.position);
@@ -89,13 +89,12 @@ public class Ammo_Behaviour : MonoBehaviour
         {
 
         }
-        Debug.Log(_score.score);
 
         if (collision.CompareTag("Barrel"))
         {
-            _weapon.fireRate = 0.2f;
-            StartCoroutine(IncreaseFirerate());
-            Destroy(collision.gameObject);
+            _score.score += 5;
+            //_weapon.fireRate = 0.2f;
+            //StartCoroutine(IncreaseFirerate());
         }
     }
 }

@@ -14,7 +14,7 @@ public class Target_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _rb.AddForce(_speed/Random.Range(1, 4), _speed, 0f);
+        _rb.AddForce(_speed/Random.Range(2, 4), _speed, 0f);
 
         StartCoroutine(Lifetime());
     }
