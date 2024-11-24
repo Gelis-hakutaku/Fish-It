@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private TimerManager timer;
+    [SerializeField] private TimerManager _timer;
+    [SerializeField] private int _duration;
     // Start is called before the first frame update
     void Start()
     {
+        _timer.duration = _duration;
         StartCoroutine(CountdownTimer());
     }
 
     IEnumerator CountdownTimer()
     {
-        while (timer.duration > 0)
+        while (_timer.duration > 0)
         {
             yield return new WaitForSeconds(1f);
-            timer.duration--;
-            Debug.Log(timer.duration);
+            _timer.duration--;
+            Debug.Log(_timer.duration);
         }
 
 

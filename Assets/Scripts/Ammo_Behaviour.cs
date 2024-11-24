@@ -10,6 +10,7 @@ public class Ammo_Behaviour : MonoBehaviour
     [SerializeField] private TimerManager _timer;
     [SerializeField] private int bonusChain;
 
+    [SerializeField] private UIManager _uiManager;
     private Transform target;
 
 
@@ -32,6 +33,13 @@ public class Ammo_Behaviour : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    IEnumerator Blinded()
+    {
+        Vector3 spawnPos = Camera.main.WorldToScreenPoint(Camera.main.transform.position);
+        Instantiate(_uiManager.uiEncre, spawnPos, Quaternion.LookRotation(Camera.main.transform.position));
+        yield return new WaitForSeconds(3f);
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Fish"))
@@ -51,7 +59,7 @@ public class Ammo_Behaviour : MonoBehaviour
 
         if (collision.CompareTag("Squid"))
         {
-
+            StartCoroutine(Blinded());
         }
 
         if (collision.CompareTag("PufferFish"))
