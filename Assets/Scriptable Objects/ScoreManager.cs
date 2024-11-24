@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Score", menuName = "Scriptable Objects/Score", order = 1)]
 public class ScoreManager : ScriptableObject
 {
-    [NonSerialized] private int _score;
+    [SerializeField] private int _score;
     private int _highscore;
 
     public int score

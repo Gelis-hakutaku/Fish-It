@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786738d973ea4e1448bb28ce0b52f4ab, type: 3}
   m_Name: UIManager
   m_EditorClassIdentifier: 
-  _uiEncre: {fileID: 0}
+  _uiEncre: {fileID: 1080908911082090493, guid: 0a387fff165d03145b4e39e8bff744c3, type: 3}
