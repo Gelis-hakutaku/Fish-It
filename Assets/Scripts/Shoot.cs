@@ -8,6 +8,7 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField] private MeshRenderer mr;
     [SerializeField] private GameObject ammo;
+    [SerializeField] private WeaponManager stats;
     private bool canFire = true;
 
     private void Update()
@@ -29,7 +30,7 @@ public class Shoot : MonoBehaviour
         Instantiate(ammo, this.transform.position, Quaternion.identity);
         mr.enabled = false;
         canFire = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(stats.fireRate);
         mr.enabled = true;
         canFire = true;
     }

@@ -312,3 +312,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mr: {fileID: 2936803527267048288}
   ammo: {fileID: 6560284618910988715, guid: d6bf5d4c9a955d44d85d2ada9a0e9788, type: 3}
+  stats: {fileID: 11400000, guid: babecca346775b14ba83e9544def58d9, type: 2}

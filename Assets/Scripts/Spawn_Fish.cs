@@ -27,7 +27,7 @@ public class Spawn_Fish : MonoBehaviour
 
             yield return new WaitForSeconds(waitTime);
 
-            Instantiate(fish[Random.Range(0, fish.Length)], transform.position, transform.rotation);
+            Instantiate(fish[Random.Range(0, fish.Length)], transform.position, Quaternion.identity);
         }
     }
 }

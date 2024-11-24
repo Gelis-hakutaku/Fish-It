@@ -8,6 +8,7 @@ TagManager:
   - Squid
   - PufferFish
   - RainbowFish
+  - Barrel
   layers:
   - Default
   - TransparentFX

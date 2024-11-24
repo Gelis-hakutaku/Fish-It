@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             _timer.duration--;
-            Debug.Log(_timer.duration);
         }
 
 
